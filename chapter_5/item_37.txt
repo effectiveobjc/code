@@ -1,0 +1,23 @@
+// Item 37
+
+// Don't do this
+while ([object retainCount]) {
+    [object release];
+}
+
+
+// Large "retain counts" of some objects (singletons)
+NSString *string = @"Some string";
+NSLog(@"string retainCount = %lu", [string retainCount]);
+
+NSNumber *number = @1;
+NSLog(@"number retainCount = %lu", [number retainCount]);
+
+NSNumber *numberFloat = @3.141f;
+NSLog(@"numberFloat retainCount = %lu", [numberFloat retainCount]);
+
+
+// Showing retain count might not necessarily be what you expect
+id object = [self createObject];
+[opaqueObject doSomethingWithObject:object];
+NSLog(@"retainCount = %lu", [object retainCount]);
