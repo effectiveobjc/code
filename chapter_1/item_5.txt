@@ -74,13 +74,13 @@ typedef NS_ENUM(NSUInteger, EOCConnectionState) {
 // …
 
 switch (_currentState) {
-    EOCConnectionStateDisconnected:
+    case EOCConnectionStateDisconnected:
         // Handle disconnected state
         break;
-    EOCConnectionStateConnecting:
+    case EOCConnectionStateConnecting:
         // Handle connecting state
         break;
-    EOCConnectionStateConnected:
+    case EOCConnectionStateConnected:
         // Handle connected state
         break;
 }
