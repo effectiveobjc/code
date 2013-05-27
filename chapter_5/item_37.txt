@@ -10,11 +10,11 @@ while ([object retainCount]) {
 NSString *string = @"Some string";
 NSLog(@"string retainCount = %lu", [string retainCount]);
 
-NSNumber *number = @1;
-NSLog(@"number retainCount = %lu", [number retainCount]);
+NSNumber *numberI = @1;
+NSLog(@"numberI retainCount = %lu", [numberI retainCount]);
 
-NSNumber *numberFloat = @3.141f;
-NSLog(@"numberFloat retainCount = %lu", [numberFloat retainCount]);
+NSNumber *numberF = @3.141f;
+NSLog(@"numberF retainCount = %lu", [numberF retainCount]);
 
 
 // Showing retain count might not necessarily be what you expect
